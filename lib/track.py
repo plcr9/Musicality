@@ -3,5 +3,8 @@ class Track:
         self.title = title
         self.artist = artist
 
-    def format(self):
-        return f"{self.title} by {self.artist}"
+    def matches(self, keyword):
+        if keyword in self.title or keyword in self.artist:
+            return True
+        else:
+            return False
